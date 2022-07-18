@@ -1,0 +1,395 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+:root {
+  --clr-primary: hsl(229, 42%, 59%);
+  --clr-neutral: hsl(0, 0%, 100%);
+  --clr-accent:  hsl(41, 98%, 50%);
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  background-color: var(--clr-primary)
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 20px 10px;
+}
+
+img {
+  max-width: 170px;
+ 
+}
+
+
+.title {
+  color: var(--clr-accent);
+  font-size: 2.5rem;
+  margin: 0 0 20px 0;
+  
+}
+
+.hiragana {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 3rem;
+}
+
+.title--span {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  margin: 10vh 0;
+}
+.wrapper {
+  margin: 0 20px;
+}
+
+section {
+  background-color: var(--clr-neutral);
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.section--intro {
+  padding: 20px;
+  text-align: center;
+  min-height: 900px;
+}
+
+.card--number {
+  color: var(--clr-neutral);
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: .2rem;
+  text-align: right;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+/*settings buttons*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  min-width: 70px;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-primary);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider--disabled {
+  background-color: hsl(229, 100%, 93%);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--clr-neutral);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--clr-accent);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--clr-accent);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switchers-section {
+  display: grid;
+  place-items: center;
+}
+
+.switchers-wrapper {
+  max-width: 300px;
+}
+
+.switcher-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  
+  
+}
+
+.switcher-text {
+  margin: 0 0 0 9px;
+  font-size: 1.3rem
+}
+
+.deck-number {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--clr-accent);
+  font-weight: 700;
+}
+
+/*Repeat button*/
+
+.repeat-title {
+  margin-top: 2rem;
+}
+
+.switcher--repeat {
+  margin-top: 0;
+  background-color:hsl(229, 100%, 93%);
+  border-radius: 10px;
+}
+
+.repeat-text {
+  padding: 0 15px;
+  font-weight: 600;
+}
+
+.no {
+  color: var(--clr-primary);
+}
+
+.yes {
+  color: var(--clr-accent);
+}
+
+
+textarea {
+  margin: 0;
+  outline: 0;
+  border: 1px solid var(--clr-accent);
+  background-color: hsl(41, 91%, 86%);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 55px;
+  padding: 6px 6px;
+  max-height: 38px;
+  
+}
+
+.textarea--disabled {
+  border: 1px solid var(--clr-primary);
+  background-color: hsl(229, 100%, 93%);
+}
+
+textarea:active,
+textarea:focus {
+  background-color: var(--clr-neutral);
+}
+
+/*front of the card*/
+.text-answer {
+  font-size: 10.3rem;
+  font-family:'Times New Roman', Times, serif;
+  
+}
+
+/*Flip Styles*/
+
+.flip-container {
+  position: relative;
+  min-width: 250px;
+  height: 450px;
+  background-color: var(--clr-primary);
+  border-radius: 10px;
+}
+
+.flip-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  background-color: var(--clr-primary);
+  border-radius: 10px;
+  
+  
+}
+
+/* .flip-card:hover {
+  transform: rotateY(180deg)
+} */
+
+#flip {
+  transform: rotateY(180deg)
+}
+
+.card--front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: var(--clr-neutral);
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  
+}
+
+.card--back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: var(--clr-neutral);
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.flip-text {
+  margin: 0 0 23px 0;
+  font-size: 1.5rem;
+  background-color: var(--clr-neutral);
+  text-align: center;
+  margin-top: 5rem;
+  
+}
+
+.last-card-message {
+  color: var(--clr-accent);
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+/*Settings icon buttons styles*/
+.wrapper--buttons {
+  min-width: 250px;
+  margin-top: 25px;
+  
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 10px 15px ;
+  background-color: var(--clr-neutral);
+  border-radius: 10px;
+}
+
+.button {
+  padding: 5px 0;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+
+
+.button--settings {
+  border-right: 1px solid var(--clr-primary);
+  display: flex;
+  margin-left: 20px;
+}
+
+.button--next {
+  border-left: 1px solid var(--clr-primary);
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+
+.button--play {
+  margin-top: 1.7rem;
+  background-color: var(--clr-accent) ;
+  border-radius: 10px;
+  padding: 13px;
+  color: var(--clr-neutral);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  
+}
+
+.button--play:hover,
+.button--play:focus {
+  background-color: var(--clr-neutral) ;
+  color: var(--clr-accent);
+}
+
+.error-message {
+  color: red;
+}
+
+@media (min-width: 430px) {
+  
+
+  .flip-container {
+    position: relative;
+    min-width: 350px;
+    height: 470px;
+  }
+
+  .wrapper--buttons {
+    min-width: 350px;
+  }
+
+  
+
+}

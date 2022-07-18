@@ -1,0 +1,500 @@
+ const cards = [
+    {
+        "path": "../images/set1-a.png",
+        "id": 1,
+        "group": 1,
+        "answer": "a"
+    },
+
+    {
+        "path": "../images/set1-e.png",
+        "id": 2,
+        "group": 1,
+        "answer": "e"
+    },
+
+    {
+        "path": "../images/set1-i.png",
+        "id": 3,
+        "group": 1,
+        "answer": "i"
+    },
+
+    {
+        "path": "../images/set1-o.png",
+        "id": 4,
+        "group": 1,
+        "answer": "o"
+    },
+
+    {
+        "path": "../images/set1-u.png",
+        "id": 5,
+        "group": 1,
+        "answer": "u"
+    },
+
+    {
+        "path": "../images/set2-ka.png",
+        "id": 6,
+        "group": 1,
+        "answer": "ka"
+    },
+
+    {
+        "path": "../images/set2-ke.png",
+        "id": 7,
+        "group": 1,
+        "answer": "ke"
+    },
+
+    {
+        "path": "../images/set2-ki.png",
+        "id": 8,
+        "group": 1,
+        "answer": "ki"
+    },
+
+    {
+        "path": "../images/set2-ko.png",
+        "id": 9,
+        "group": 1,
+        "answer": "ko"
+    },
+
+    {
+        "path": "../images/set2-ku.png",
+        "id": 10,
+        "group": 1,
+        "answer": "ku"
+    },
+
+    {
+        "path": "../images/set3-sa.png",
+        "id": 11,
+        "group": 1,
+        "answer": "sa"
+    },
+
+    {
+        "path": "../images/set3-se.png",
+        "id": 12,
+        "group": 1,
+        "answer": "se"
+    },
+
+    {
+        "path": "../images/set3-shi.png",
+        "id": 13,
+        "group": 1,
+        "answer": "si"
+    },
+
+    {
+        "path": "../images/set3-so.png",
+        "id": 14,
+        "group": 1,
+        "answer": "so"
+    },
+
+    {
+        "path": "../images/set3-su.png",
+        "id": 15,
+        "group": 1,
+        "answer": "su"
+    },
+
+    {
+        "path": "../images/set4-chi.png",
+        "id": 16,
+        "group": 2,
+        "answer": "chi"
+    },
+
+    {
+        "path": "../images/set4-ta.png",
+        "id": 17,
+        "group": 2,
+        "answer": "ta"
+    },
+
+    {
+        "path": "../images/set4-te.png",
+        "id": 18,
+        "group": 2,
+        "answer": "te"
+    },
+
+    {
+        "path": "../images/set4-to.png",
+        "id": 19,
+        "group": 2,
+        "answer": "to"
+    },
+
+    {
+        "path": "../images/set4-tsu.png",
+        "id": 20,
+        "group": 2,
+        "answer": "tsu"
+    },
+
+    {
+        "path": "../images/set5-na.png",
+        "id": 21,
+        "group": 2,
+        "answer": "na"
+    },
+
+    {
+        "path": "../images/set5-ne.png",
+        "id": 22,
+        "group": 2,
+        "answer": "ne"
+    },
+
+    {
+        "path": "../images/set5-ni.png",
+        "id": 23,
+        "group": 2,
+        "answer": "ni"
+    },
+
+    {
+        "path": "../images/set5-no.png",
+        "id": 24,
+        "group": 2,
+        "answer": "no"
+    },
+
+    {
+        "path": "../images/set5-nu.png",
+        "id": 25,
+        "group": 2,
+        "answer": "nu"
+    },
+
+
+    {
+        "path": "../images/set6-fu.png",
+        "id": 26,
+        "group": 2,
+        "answer": "fu"
+    },
+
+    {
+        "path": "../images/set6-ha.png",
+        "id": 27,
+        "group": 2,
+        "answer": "ha"
+    },
+
+    {
+        "path": "../images/set6-he.png",
+        "id": 28,
+        "group": 2,
+        "answer": "he"
+    },
+
+    {
+        "path": "../images/set6-hi.png",
+        "id": 29,
+        "group": 2,
+        "answer": "hi"
+    },
+
+
+    {
+        "path": "../images/set6-ho.png",
+        "id": 30,
+        "group": 2,
+        "answer": "ho"
+    },
+
+    {
+        "path": "../images/set7-ma.png",
+        "id": 31,
+        "group": 3,
+        "answer": "ma"
+    },
+
+    {
+        "path": "../images/set7-me.png",
+        "id": 32,
+        "group": 3,
+        "answer": "me"
+    },
+
+    {
+        "path": "../images/set7-mi.png",
+        "id": 33,
+        "group": 3,
+        "answer": "mi"
+    },
+
+    {
+        "path": "../images/set7-mo.png",
+        "id": 34,
+        "group": 3,
+        "answer": "mo"
+    },
+
+    {
+        "path": "../images/set7-mu.png",
+        "id": 35,
+        "group": 3,
+        "answer": "mu"
+    },
+
+    {
+        "path": "../images/set8-ya.png",
+        "id": 36,
+        "group": 3,
+        "answer": "ya"
+    },
+
+    {
+        "path": "../images/set8-yo.png",
+        "id": 37,
+        "group": 3,
+        "answer": "yo"
+    },
+
+    {
+        "path": "../images/set8-yu.png",
+        "id": 38,
+        "group": 3,
+        "answer": "yu"
+    },
+
+    {
+        "path": "../images/set9-ra.png",
+        "id": 39,
+        "group": 3,
+        "answer": "ra"
+    },
+
+    {
+        "path": "../images/set9-re.png",
+        "id": 40,
+        "group": 3,
+        "answer": "re"
+    },
+
+    {
+        "path": "../images/set9-ri.png",
+        "id": 41,
+        "group": 3,
+        "answer": "ri"
+    },
+
+    {
+        "path": "../images/set9-ro.png",
+        "id": 42,
+        "group": 3,
+        "answer": "ro"
+    },
+
+    {
+        "path": "../images/set9-ru.png",
+        "id": 43,
+        "group": 3,
+        "answer": "ru"
+    },
+
+    {
+        "path": "../images/set-10-wa.png",
+        "id": 44,
+        "group": 3,
+        "answer": "wa"
+    },
+
+    {
+        "path": "../images/set-10-wo.png",
+        "id": 45,
+        "group": 3,
+        "answer": "wo"
+    },
+
+    {
+        "path": "../images/set-11-ga.png",
+        "id": 46,
+        "group": 4,
+        "answer": "ga"
+    },
+
+    {
+        "path": "../images/set-11-ge.png",
+        "id": 47,
+        "group": 4,
+        "answer": "ge"
+    },
+
+    {
+        "path": "../images/set-11-gi.png",
+        "id": 48,
+        "group": 4,
+        "answer": "gi"
+    },
+
+    {
+        "path": "../images/set-11-go.png",
+        "id": 49,
+        "group": 4,
+        "answer": "go"
+    },
+
+    {
+        "path": "../images/set-11-gu.png",
+        "id": 50,
+        "group": 4,
+        "answer": "gu"
+    },
+
+    {
+        "path": "../images/set-12-za.png",
+        "id": 51,
+        "group": 4,
+        "answer": "za"
+    },
+
+    {
+        "path": "../images/set-12-ze.png",
+        "id": 52,
+        "group": 4,
+        "answer": "ze"
+    },
+
+    {
+        "path": "../images/set-12-zi.png",
+        "id": 53,
+        "group": 4,
+        "answer": "zi"
+    },
+
+    {
+        "path": "../images/set-12-zo.png",
+        "id": 54,
+        "group": 4,
+        "answer": "zo"
+    },
+
+    {
+        "path": "../images/set-12-zu.png",
+        "id": 55,
+        "group": 4,
+        "answer": "zu"
+    },
+
+    {
+        "path": "../images/set-13-da.png",
+        "id": 56,
+        "group": 4,
+        "answer": "da"
+    },
+
+    {
+        "path": "../images/set-13-de.png",
+        "id": 57,
+        "group": 4,
+        "answer": "de"
+    },
+
+    {
+        "path": "../images/set-13-di.png",
+        "id": 58,
+        "group": 4,
+        "answer": "di"
+    },
+
+    {
+        "path": "../images/set-13-do.png",
+        "id": 59,
+        "group": 4,
+        "answer": "do"
+    },
+
+    {
+        "path": "../images/set-13-du.png",
+        "id": 60,
+        "group": 4,
+        "answer": "du"
+    },
+
+    {
+        "path": "../images/set-14-ba.png",
+        "id": 61,
+        "group": 4,
+        "answer": "ba"
+    },
+
+    {
+        "path": "../images/set-14-be.png",
+        "id": 62,
+        "group": 4,
+        "answer": "be"
+    },
+
+    {
+        "path": "../images/set-14-bi.png",
+        "id": 63,
+        "group": 4,
+        "answer": "bi"
+    },
+
+    {
+        "path": "../images/set-14-bo.png",
+        "id": 64,
+        "group": 4,
+        "answer": "bo"
+    },
+
+    {
+        "path": "../images/set-14-bu.png",
+        "id": 65,
+        "group": 4,
+        "answer": "bu"
+    },
+
+    {
+        "path": "../images/set-15-pa.png",
+        "id": 66,
+        "group": 4,
+        "answer": "pa"
+    },
+
+    {
+        "path": "../images/set-15-pe.png",
+        "id": 67,
+        "group": 4,
+        "answer": "pe"
+    },
+
+    {
+        "path": "../images/set-15-pi.png",
+        "id": 68,
+        "group": 4,
+        "answer": "pi"
+    },
+
+    {
+        "path": "../images/set-15-po.png",
+        "id": 69,
+        "group": 4,
+        "answer": "po"
+    },
+
+    {
+        "path": "../images/set-15-pu.png",
+        "id": 70,
+        "group": 4,
+        "answer": "pu"
+    },
+
+    {
+        "path": "../images/set-10-n.png",
+        "id": 71,
+        "group": 3,
+        "answer": "n"
+    }
+]
