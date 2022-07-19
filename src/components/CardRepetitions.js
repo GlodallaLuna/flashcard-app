@@ -19,6 +19,7 @@ console.log(cardNumberInput)
   // gameData is an object containing the curent card and the indices of the remaning cards in gameDeck
   const [counter, setCounter] = useState(1)
   const [lastCard, setLastCard] = useState(false)
+  const [isFlipped, setIsFlipped] = useState(false)
 
   // Methods
 
@@ -63,6 +64,7 @@ console.log(cardNumberInput)
 
     setGameData(newGameData)
     setCounter(newCounter)
+    setIsFlipped(false)
   }
 
   // Render the message showing we're at the last card
@@ -78,8 +80,9 @@ console.log(cardNumberInput)
       <div className='grid'>
         {showLastCardMessage()}
         <p className='card--number'>{counter}/{cardNumberInput === 0 ? '∞' : cardNumberInput}</p>
-        <div className='flip-container'>
-      <div className='flip-card'>
+        
+        <div className='flip-container' onClick={() => setIsFlipped(!isFlipped)}>
+      <div className='flip-card' id={isFlipped ? 'flip' : ''}>
         <div className='card--front'>
           <div><img src={gameData.currentCard.path} alt="hiragana" />
           <p className='flip-text'>Flip the Card</p></div>
@@ -89,6 +92,7 @@ console.log(cardNumberInput)
         </div>
       </div>
     </div>
+
         <div className="wrapper--buttons">
           <div className="button-container">
             <div className='button button--settings '>

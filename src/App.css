@@ -260,16 +260,13 @@ textarea:focus {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
   background-color: var(--clr-primary);
   border-radius: 10px;
   
   
 }
 
-/* .flip-card:hover {
-  transform: rotateY(180deg)
-} */
+
 
 #flip {
   transform: rotateY(180deg)

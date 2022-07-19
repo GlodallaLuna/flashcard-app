@@ -11,7 +11,7 @@ function selectRandomElement(array) {
 }
 
 
-const Card = (props) => {
+const CardPage = (props) => {
   const {changePage, gameDeck} = props
 
   // State variables
@@ -71,6 +71,7 @@ const Card = (props) => {
 
     setGameData(newGameData)
     setCounter(newCounter)
+    setIsFlipped(false)
   }
 
   // Render the message showing we're at the last card
@@ -87,17 +88,13 @@ const Card = (props) => {
       <div className='grid'>
         {showLastCardMessage()}
         <p className='card--number'>{counter}/{gameDeck.length}</p>
-        <div className='flip-container' onClick={() => setIsFlipped(!isFlipped)}>
-      <div className='flip-card' id={isFlipped ? 'flip' : ''}>
-        <div className='card--front'>
-          <div><img src={gameData.currentCard.path} alt="hiragana" />
-          <p className='flip-text'>Flip the Card</p></div>
-        </div>
-        <div className='card--back'>
-          <div className='text-answer'>{gameData.currentCard.answer}</div>
-        </div>
-      </div>
-    </div>
+
+        <Card 
+          currentCard={gameData.currentCard}
+          isFlipped={isFlipped}
+          setIsFlipped={setIsFlipped}
+        />
+
         <div className="wrapper--buttons">
           <div className="button-container">
             <div className='button button--settings '>
@@ -119,4 +116,23 @@ const Card = (props) => {
     )
 }
 
-export default Card;
+const Card = (props) => {
+
+  const {currentCard, isFlipped, setIsFlipped} = props
+  
+  return (
+  <div className='flip-container' onClick={() => setIsFlipped(!isFlipped)}>
+  <div className='flip-card' id={isFlipped ? 'flip' : ''}>
+    <div className='card--front'>
+      <div><img src={currentCard.path} alt="hiragana" />
+      <p className='flip-text'>Flip the Card</p></div>
+    </div>
+    <div className='card--back'>
+      <div className='text-answer'>{currentCard.answer}</div>
+    </div>
+  </div>
+</div>
+  )
+}
+
+export default CardPage;

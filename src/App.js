@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Settings from './components/Settings';
-import Card from './components/Card';
+import CardPage from './components/CardPage';
 import CardRepetitions from './components/CardRepetitions';
 
 const completeDeck = [
@@ -634,7 +634,7 @@ function App() {
                 repetitions={selectedCharacters.repetitions}
                 />
     } else if(currentPage === 'card') {
-        return <Card 
+        return <CardPage 
                 changePage={setCurrentPage} 
                 gameDeck={gameDeck}
                 />
