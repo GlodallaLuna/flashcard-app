@@ -13,6 +13,7 @@ function selectRandomElement(array) {
 
 const CardPage = (props) => {
   const {changePage, gameDeck} = props
+  
 
   // State variables
   // gameData is an object containing the curent card and the indices of the remaning cards in gameDeck
@@ -93,6 +94,7 @@ const CardPage = (props) => {
           currentCard={gameData.currentCard}
           isFlipped={isFlipped}
           setIsFlipped={setIsFlipped}
+          key={counter}
         />
 
         <div className="wrapper--buttons">
